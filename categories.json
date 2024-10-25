@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Iphone 13 ProMax",
+    "price": 23000000,
+    "image": "",
+    "category_id": 1
+  },
+  {
+    "id": 2,
+    "name": "Iphone 13 ProMax",
+    "price": 23000000,
+    "image": "",
+    "category_id": 2
+  },
+  {
+    "id": 3,
+    "name": "Iphone 13 ProMax",
+    "price": 23000000,
+    "image": "",
+    "category_id": 3
+  },
+  {
+    "id": 4,
+    "name": "Iphone 13 ProMax",
+    "price": 23000000,
+    "image": "",
+    "category_id": 4
+  }
+]
