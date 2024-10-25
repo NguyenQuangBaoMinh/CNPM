@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Công Nghệ Phần Mềm</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f0f0f0;
+            margin: 0;
+        }
+
+        .heart {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transform: rotate(-45deg);
+            animation: heartbeat 1s infinite alternate;
+            margin-bottom: 20px;
+        }
+
+        .heart:before,
+        .heart:after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 50%;
+        }
+
+        .heart:before {
+            top: -50px;
+            left: 0;
+        }
+
+        .heart:after {
+            left: 50px;
+            top: 0;
+        }
+
+        @keyframes heartbeat {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.1);
+            }
+        }
+
+        .names {
+            font-size: 24px;
+            color: #333;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .couple {
+            margin-top: 20px;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .person {
+            width: 50px;
+            height: 100px;
+            border: 2px dashed black;
+            position: relative;
+            margin: 0 10px;
+        }
+
+        .person:before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background-color: black;
+            border-radius: 50%;
+            position: absolute;
+            top: -5px;
+            left: 20px;
+        }
+
+        .kiss {
+            width: 10px;
+            height: 10px;
+            background-color: black;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            transform: translate(-50%, -50%);
+        }
+
+        .options {
+            margin-top: 30px;
+            display: flex;
+            gap: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">E-ecommerce</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                {% for c in categories %}
+                <li class="nav-item">
+                    <a class="nav-link" href="#">{{ c.name }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="text-center" style="flex-grow: 1;">
+    <div class="heart"></div>
+    <div class="names">
+        <p>Phan Vĩnh Phúc</p>
+        <p>Lâm Võ Thủy Tiên</p>
+    </div>
+
+    <div class="couple">
+        <div class="person">
+            <div class="kiss"></div>
+        </div>
+        <div class="person">
+            <div class="kiss"></div>
+        </div>
+    </div>
+
+    <div class="options">
+        <button class="btn btn-primary">Còn Nhớ Em</button>
+        <button class="btn btn-secondary">Hết Nhớ</button>
+        <button class="btn btn-danger">Nhớ hồ con rùa quá</button>
+    </div>
+</div>
+
+</body>
+</html>
